@@ -1,0 +1,47 @@
+body {
+	background-image: url('bg.jpg');
+	background-size: cover;
+}
+
+#mainrow {
+	height: 100%;
+	padding-top: 15%;
+}
+
+#react-cont {
+	width: 200px;
+	height: 200px;
+}
+
+.rotate {
+	animation-name: rotate;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+.rotate2 {
+	animation-name: rotate2;
+	animation-duration: 9s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+	0% {width: 72px; height: 72px;}
+	30% {width: 72px; height: 72px; transform: rotate(0deg);}
+	40% {width: 130px; height: 130px; transform: rotate(20deg);}
+	50% {width: 72px; height: 72px; transform: rotate(0deg);}
+
+}
+
+@keyframes rotate2 {
+	0% {width: 72px; height: 72px;}
+	60% {width: 72px; height: 72px; transform: rotate(0deg);}
+	70% {width: 130px; height: 130px; transform: rotate(-20deg);}
+	80% {width: 72px; height: 72px; transform: rotate(0deg);}
+
+}
+
+h1 {
+	color: #ffffff;
+	text-shadow: 2px 2px 5px #000000;
+}
