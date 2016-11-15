@@ -25,6 +25,20 @@ body {
 	animation-iteration-count: infinite;
 }
 
+.qty {
+	border-radius: 50%;
+
+    width: 80px;
+    height: 80px;
+    padding-top: 15px;
+
+    background: #666666;
+    border: 2px solid #666666;
+    color: #ffffff;
+    text-align: center;
+
+}
+
 @keyframes rotate {
 	0% {width: 72px; height: 72px;}
 	30% {width: 72px; height: 72px; transform: rotate(0deg);}
