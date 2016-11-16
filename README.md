@@ -1,3 +1,5 @@
+##### Don’t feel like setting this up on your own web server? I host a free online platform for FB Live Reaction Polling - [check it out](https://react.cast.net.au/polls/), no coding required!
+
 # Facebook Live Video Polling
 Useful features:
 * Automatically update reaction count from Facebook Graph API
