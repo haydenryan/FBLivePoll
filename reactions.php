@@ -7,12 +7,9 @@
 if (isset($_GET['videoid'])){
 	$videoid=$_GET['videoid'];
 } else {
-//$videoid="VIDEO_ID_HERE";        // The ID of the Live Video
-$videoid="1431558856916241";
+$videoid="VIDEO_ID_HERE";        // The ID of the Live Video
 }
-//$access_token="ACCESS_TOKEN_HERE";   // Your Facebook app's access token in the format 1111111111111111|X1xX11xX_XXXxXxXXX1xXXx1XXX
-$access_token="1230767220326571|M5sY72zB_HYLaNkSZZ4bCVg3AQE";
-
+$access_token="ACCESS_TOKEN_HERE";   // Your Facebook app's access token in the format 1111111111111111|X1xX11xX_XXXxXxXXX1xXXx1XXX
 
 set_time_limit(128); // Increase the standard time limit
 
