@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>FB Reactions</title>
+    <title>Facebook Live Reactions</title>
 
     <!-- Bootstrap -->
 <!-- Latest compiled and minified CSS -->
@@ -21,6 +21,17 @@
     <![endif]-->
   </head>
   <body>
+
+  <!--
+  ===========================
+  IMPORTANT: HOW TO CUSTOMISE
+  ===========================
+
+  To change the reaction, FIND and REPLACE every instance of love or wow and change it to your desired reaction eg. haha, like, angry
+
+  To change the background image or colour scheme, edit the STYLE.CSS file
+  -->
+
 <div class="container">
 <div class="row" id="mainrow">
 <div class="col-xs-6">
@@ -48,7 +59,7 @@
 
 <script>
 setInterval(function(){ 
-  $.get("/reactions.php?reaction=love", function(data, status){
+  $.get("./reactions.php?reaction=love", function(data, status){
     document.getElementById('loveqty').innerHTML = data;
 
      });
@@ -56,7 +67,7 @@ setInterval(function(){
 }, 1000);
 
 setInterval(function(){ 
-  $.get("/reactions.php?reaction=wow", function(data, status){
+  $.get("./reactions.php?reaction=wow", function(data, status){
     document.getElementById('wowqty').innerHTML = data;
 
      });

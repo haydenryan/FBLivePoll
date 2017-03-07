@@ -1,3 +1,6 @@
+/*
+To change the background image, alter the URL below
+*/
 body {
 	background-image: url('bg.jpg');
 	background-size: cover;
@@ -13,16 +16,9 @@ body {
 	height: 200px;
 }
 
-.rotate {
-	animation-name: rotate;
-	animation-duration: 10s;
-	animation-iteration-count: infinite;
-}
-
-.rotate2 {
-	animation-name: rotate2;
-	animation-duration: 9s;
-	animation-iteration-count: infinite;
+h1 {
+	color: #ffffff;
+	text-shadow: 2px 2px 5px #000000;
 }
 
 .qty {
@@ -36,7 +32,22 @@ body {
     border: 2px solid #666666;
     color: #ffffff;
     text-align: center;
+}
 
+
+/*
+To TURN OFF animations, delete or comment out the rest of this file
+*/
+.rotate {
+	animation-name: rotate;
+	animation-duration: 10s;
+	animation-iteration-count: infinite;
+}
+
+.rotate2 {
+	animation-name: rotate2;
+	animation-duration: 9s;
+	animation-iteration-count: infinite;
 }
 
 @keyframes rotate {
@@ -55,7 +66,3 @@ body {
 
 }
 
-h1 {
-	color: #ffffff;
-	text-shadow: 2px 2px 5px #000000;
-}

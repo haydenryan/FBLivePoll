@@ -7,14 +7,18 @@
 if (isset($_GET['videoid'])){
 	$videoid=$_GET['videoid'];
 } else {
-$videoid="VIDEO_ID_HERE";                                    // The ID of the Live Video
+//$videoid="VIDEO_ID_HERE";        // The ID of the Live Video
+$videoid="1431558856916241";
 }
-$access_token="ACCESS_TOKEN_HERE";   // Your Facebook app's access token in the format 1111111111111111|X1xX11xX_XXXxXxXXX1xXXx1XXX
+//$access_token="ACCESS_TOKEN_HERE";   // Your Facebook app's access token in the format 1111111111111111|X1xX11xX_XXXxXxXXX1xXXx1XXX
+$access_token="1230767220326571|M5sY72zB_HYLaNkSZZ4bCVg3AQE";
 
 
 set_time_limit(128); // Increase the standard time limit
 
 // Below is the CURL magic!
+// Make sure you have CURL installed and working with PHP, otherwise 
+// this page will be blank when opened in a browser
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -41,38 +45,29 @@ if (isset($_GET['json'])){
 // If requesting an INDIVIDUAL reaction (ie. reaction variable is set in URL), display only the quantity of that specific reaction
 if (isset($_GET['reaction'])){
 $reaction=$_GET['reaction'];
-if ($reaction=="love"){
-echo $love;
-
-} elseif ($reaction=="wow"){
-echo $wow;
-
-} elseif ($reaction=="haha"){
-	echo $haha;
-
-} elseif ($reaction=="like"){
-	echo $like;
-
-} elseif ($reaction=="angry"){
-	echo $angry;
-} elseif ($reaction=="sad"){
-	echo $sad;
+switch ($reaction) {
+	case "love":
+		echo $love;
+		break;
+	case "wow":
+		echo $wow;
+		break;
+	case "haha":
+		echo $haha;
+		break;
+	case "like":
+		echo $like;
+		break;
+	case "angry":
+		echo $angry;
+		break;
+	case "sad":
+		echo $sad;
+		break;
 }
 // Otherwise, if the reaction variable is NOT set in the URL, display the quantity of all reactions - this is good for testing purposes
 } else {
-echo "LOVE: ";
-echo $love;
 
-echo " WOW: ";
-echo $wow;
-
-echo " HAHA: ";
-echo $haha;
-
-echo " LIKE: ";
-echo $like;
-
-echo " ANGRY: ";
-echo $angry;
+echo "LOVE: $love, WOW: $wow, HAHA: $haha, LIKE: $like, ANGRY: $angry, SAD: $sad";
 }
 ?>
