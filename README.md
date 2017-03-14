@@ -47,6 +47,8 @@ FBLivePoll is based on [Bootstrap](http://getbootstrap.com) and uses the Faceboo
 
 If no values are displayed, ensure the Facebook Access Token entered is correct (it should be in the format 1111111111111111|X1xX11xX_XXXxXxXXX1xXXx1XXX, where 1 is a number and x is a letter.)
 
-If you're still having problems, ensure CURL is correctly configured in your environment and that all file permissions are correct.
+##### If you're still having problems:
+1. Ensure CURL is correctly configured in your environment and that all file permissions are correct.
+2. If you aren't serving the files from your web root, change the URL of ```$.get("./reactions.php?reaction=love", function(data, status){``` on line **60** and ```$.get("./reactions.php?reaction=wow", function(data, status){``` on line **66** respectively.
 
 [Email Me](mailto:hayden@gennext.net.au) if you have any issues - otherwise, let me know what you've made - I'd love to see it in action!
