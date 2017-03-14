@@ -8,10 +8,9 @@
     <title>Facebook Live Reactions</title>
 
     <!-- Bootstrap -->
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-        <link href="style.css" rel="stylesheet">
-
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,47 +31,42 @@
   To change the background image or colour scheme, edit the STYLE.CSS file
   -->
 
-<div class="container">
-<div class="row" id="mainrow">
-<div class="col-xs-6">
-<center>
-<h1>HOLDEN</h1>
-<img src="love.png" class="rotate">
-<h1 id="loveqty" class="qty">0</h1>
-</center>
-</div>
-<div class="col-xs-6">
-<center>
-<h1>FORD</h1>
-<img src="wow.png" class="rotate2">
-<h1 id="wowqty" class="qty">0</h1>
-</center>
-</div>
+  <div class="container">
+    <div class="row" id="mainrow">
+      <div class="col-xs-6">
+        <center>
+        <h1>HOLDEN</h1>
+        <img src="love.png" class="rotate">
+        <h1 id="loveqty" class="qty">0</h1>
+        </center>
+      </div>
+      <div class="col-xs-6">
+        <center>
+        <h1>FORD</h1>
+        <img src="wow.png" class="rotate2">
+        <h1 id="wowqty" class="qty">0</h1>
+        </center>
+      </div>
+    </div> <!-- /row -->
+  </div> <!-- /cont -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-</div> <!-- /row -->
-</div> <!-- /cont -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script>
+    setInterval(function(){ 
+      $.get("./reactions.php?reaction=love", function(data, status){
+      document.getElementById('loveqty').innerHTML = data;
+      });
+    }, 1000);
 
-<script>
-setInterval(function(){ 
-  $.get("./reactions.php?reaction=love", function(data, status){
-    document.getElementById('loveqty').innerHTML = data;
-
-     });
-
-}, 1000);
-
-setInterval(function(){ 
-  $.get("./reactions.php?reaction=wow", function(data, status){
-    document.getElementById('wowqty').innerHTML = data;
-
-     });
-
-}, 1000);
-</script>
+    setInterval(function(){ 
+      $.get("./reactions.php?reaction=wow", function(data, status){
+      document.getElementById('wowqty').innerHTML = data;
+      });
+    }, 1000);
+  </script>
   </body>
 </html>
